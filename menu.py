@@ -1,5 +1,6 @@
 from createCSV import CreateCSV
 from readData import ReadCSV
+from writeCSV import WriteCSV
 
 print("PYTHON CSV MENU")
 
@@ -11,10 +12,10 @@ def Menu():
     print("3. Write To CSV File")
     print("4. Exit")
 
-    option = int(input("Select a number between 1-3: "))
+    option = int(input("Select a number between 1-4: "))
 
-    while option < 1 or option > 3:
-        option = int(input("Try again select a number between 1-3: "))
+    while option < 1 or option > 4:
+        option = int(input("Try again select a number between 1-4: "))
 
     if option == 1:
         CreateCSV()
@@ -23,6 +24,14 @@ def Menu():
     if option == 2:
         ReadCSV()
         Menu()
-        #23A 23B
+
+    if option == 3:
+        WriteCSV()
+        Menu()
+        
+    if option == 4:
+        return
 
 Menu()
+
+#23A 23B - Seat numbers plane EGPH - EGLC

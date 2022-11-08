@@ -15,4 +15,5 @@ def ReadCSV():
         with open(CSVFile) as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
             for row in csv_reader:
-                print("Reading CSV File Working")
+               print(', '.join(row))
+
